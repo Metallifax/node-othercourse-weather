@@ -1,5 +1,5 @@
-const request = require('request');
 const process = require('process');
+const request = require('request');
 
 require('dotenv').config();
 

@@ -6,18 +6,18 @@ const address = process.argv[2];
 
 const main = () => {
   // Geocode utility function
-  geoCode(process.argv, (err, data) => {
+  geoCode(address, (err, {latitude, longitude, location}) => {
     if (err) {
       return console.log(err);
     }
 
     // Forecast utility function
-    forecast(data.latitude, data.longitude, (err, forecastData) => {
+    forecast(latitude, longitude, (err, forecastData) => {
       if (err) {
         return console.log(err);
       }
 
-      console.log(data.location);
+      console.log(location);
       console.log(forecastData);
     });
   });

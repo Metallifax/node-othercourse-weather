@@ -6,7 +6,7 @@ const address = process.argv[2];
 
 const main = () => {
   // Geocode utility function
-  geoCode(process.argv[2], (err, data) => {
+  geoCode(process.argv, (err, data) => {
     if (err) {
       return console.log(err);
     }
